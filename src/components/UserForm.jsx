@@ -41,9 +41,9 @@ useEffect(() => {
 
   return (
     <section className={`fixed bg-black/70 top-0 bottom-0 left-0 right-0 flex items-center justify-center transition-opacity ${isUser ? "visible opacity-100" : "invisible opacity-0"}`}>
-      <form onSubmit={handleSubmit(submit)} action="button" className="bg-white grid gap-8 p-[40px] relative min-w-[20%]">
+      <form onSubmit={handleSubmit(submit)} action="button" className="bg-gray-500/90 grid gap-8 p-[40px] relative min-w-[20%]">
 
-        <button type="button" onClick={handleClickCloseUser}  className="font-extrabold absolute top-6 right-6" >X</button>
+        <button type="button" onClick={handleClickCloseUser}  className="font-extrabold absolute top-6 right-6 border-black border-solid rounded-xl border-[2px] w-8 bg-red-600" >X</button>
         <h1 className="font-bold text-2xl">{usersUpdate ? "Edit user" : "New User"} </h1>
 
         <div className="grid gap-2">
@@ -71,7 +71,7 @@ useEffect(() => {
           <input className ="outline-none border-[2px] border-gray-300 rounded-md py-1" id="birthday" type="date" {...register("birthday")}/>
         </div>
         <Toaster className=""  position="top-center" />
-        <button className="bg-blue-700 text-white p-3">{usersUpdate ? "Save user" : "Add new user" }</button>
+        <button className="bg-blue-700 rounded-lg text-white p-3">{usersUpdate ? "Save user" : "Add new user" }</button>
       </form>
     </section>
   );

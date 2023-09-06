@@ -57,7 +57,7 @@ useEffect(() => {
         </div>
 
         <div className="grid gap-2">
-          <label htmlFor="email">Eamil</label>
+          <label htmlFor="email">Email</label>
           <input className ="outline-none border-[2px] border-gray-300 rounded-md py-1" id="email" type="email" placeholder="email" {...register("email", mandatoryInputsEmail)}/> {errors.email && <p className="text-red-600 text-xs">{errors.email.message}</p>}
         </div>
 
